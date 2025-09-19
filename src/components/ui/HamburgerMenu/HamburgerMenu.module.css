@@ -38,10 +38,6 @@
   bottom: 0.375rem;
 }
 
-.hamburger:hover .line {
-  background: var(--color-accent-green-light);
-}
-
 /* Open state animations - Two lines to X */
 .hamburger.open .line:nth-child(1) {
   top: 50%;
