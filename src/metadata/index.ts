@@ -64,43 +64,57 @@ export function generateMetadata(config: MetadataConfig): Metadata {
 export const pageMetadata = {
   home: {
     title: "Invest Founders - Professional Investment Platform",
-    description: "Invest in startups, manage crypto portfolios, and earn through staking. Professional investment platform for founders and investors.",
-    keywords: ["investment platform", "startup funding", "crypto investment", "staking", "asset management"],
+    description: "Invest in startups, manage crypto portfolios, and discover early opportunities. Professional investment platform for founders and investors.",
+    keywords: ["investment platform", "startup funding", "crypto investment", "early opportunities", "asset management"],
     url: "/"
   },
   
   about: {
     title: "About Us - Invest Founders",
     description: "Learn about Invest Founders' mission to democratize investment opportunities and support innovative founders worldwide.",
-    keywords: ["about invest founders", "company mission", "investment philosophy"],
+    keywords: ["about invest founders", "company mission", "investment philosophy", "team"],
     url: "/about"
   },
   
-  investments: {
-    title: "Investment Opportunities - Invest Founders",
-    description: "Discover curated investment opportunities in startups, cryptocurrencies, and digital assets.",
-    keywords: ["investment opportunities", "startup investments", "crypto investments"],
-    url: "/investments"
+  members: {
+    title: "Members - Invest Founders",
+    description: "Join our exclusive community of investors and founders. Access to premium investment opportunities and networking.",
+    keywords: ["investment community", "exclusive members", "networking", "premium access"],
+    url: "/members"
   },
   
-  staking: {
-    title: "Crypto Staking - Earn Passive Income",
-    description: "Earn passive income through cryptocurrency staking. Secure, reliable, and profitable staking services.",
-    keywords: ["crypto staking", "staking rewards", "passive income", "yield farming"],
-    url: "/staking"
+  insights: {
+    title: "Insights & Analysis - Invest Founders",
+    description: "Stay informed with our latest market insights, investment analysis, and industry trends.",
+    keywords: ["market insights", "investment analysis", "industry trends", "research"],
+    url: "/insights"
+  },
+  
+  prelist: {
+    title: "Prelist - Early Investment Opportunities",
+    description: "Discover upcoming projects and early investment opportunities before they hit the mainstream market.",
+    keywords: ["early investments", "prelist", "upcoming projects", "early opportunities"],
+    url: "/prelist"
   },
   
   portfolio: {
-    title: "Portfolio Management - Invest Founders",
-    description: "Professional portfolio management services for crypto and traditional investments.",
-    keywords: ["portfolio management", "asset management", "wealth management"],
+    title: "Portfolio Management - Invest Founders Pro",
+    description: "Track your investments and portfolio performance with our professional portfolio management tools.",
+    keywords: ["portfolio management", "investment tracking", "performance analysis", "pro tools"],
     url: "/portfolio"
+  },
+  
+  market: {
+    title: "Market Data & Analysis - Invest Founders",
+    description: "Real-time market data, analysis tools, and comprehensive market insights for informed investment decisions.",
+    keywords: ["market data", "real-time analysis", "market insights", "trading tools"],
+    url: "/market"
   },
   
   contact: {
     title: "Contact Us - Invest Founders",
     description: "Get in touch with our investment team. We're here to help you with your investment journey.",
-    keywords: ["contact invest founders", "investment support", "customer service"],
+    keywords: ["contact invest founders", "investment support", "customer service", "help"],
     url: "/contact"
   }
 };

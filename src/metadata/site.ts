@@ -2,9 +2,9 @@ import { SiteConfig } from './types';
 
 export const siteConfig: SiteConfig = {
   name: "Invest Founders",
-  description: "Professional investment platform for founders, crypto investors, and asset management. Invest in startups, manage crypto portfolios, and earn through staking.",
+  description: "Professional investment platform for founders, crypto investors, and asset management. Discover early opportunities, manage portfolios, and track market data.",
   url: "https://investfounders.com",
-  logo: "/logo.png",
+  logo: "/images/logos/kriptaz-invest-full-white-logo.svg",
   favicon: "/favicon/favicon.ico",
   keywords: [
     // Core platform keywords
@@ -13,6 +13,8 @@ export const siteConfig: SiteConfig = {
     "venture capital",
     "angel investors",
     "founder investment",
+    "early opportunities",
+    "prelist investments",
     
     // Crypto keywords
     "crypto investment",
@@ -22,20 +24,8 @@ export const siteConfig: SiteConfig = {
     "crypto portfolio management",
     "digital assets",
     "blockchain investment",
-    
-    // Staking keywords
-    "crypto staking",
-    "staking rewards",
-    "delegated staking",
-    "yield farming",
-    "passive income crypto",
-    
-    // Asset management keywords
-    "asset management",
-    "portfolio management",
-    "wealth management",
-    "investment strategy",
-    "risk management",
+    "market data",
+    "real-time analysis",
     
     // Platform features
     "investment opportunities",
@@ -43,7 +33,25 @@ export const siteConfig: SiteConfig = {
     "investor network",
     "startup ecosystem",
     "crypto trading",
-    "defi investment"
+    "defi investment",
+    "portfolio tracking",
+    "market insights",
+    "investment analysis",
+    
+    // Asset management keywords
+    "asset management",
+    "portfolio management",
+    "wealth management",
+    "investment strategy",
+    "risk management",
+    "performance tracking",
+    
+    // Community keywords
+    "investment community",
+    "exclusive members",
+    "networking",
+    "premium access",
+    "professional tools"
   ],
   author: "Invest Founders Team",
   language: "en",

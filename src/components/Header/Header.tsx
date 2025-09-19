@@ -5,7 +5,6 @@ import { Logo } from '../ui/Logo';
 import { Navigation } from '../ui/Navigation';
 import { Button } from '../ui/Button';
 import { HamburgerMenu } from '../ui/HamburgerMenu';
-import { MobileMenuNavigation } from '../ui/MobileMenuNavigation/MobileMenuNavigation';
 import styles from './Header.module.css';
 import { HeaderProps } from './types';
 
@@ -47,24 +46,6 @@ import { HeaderProps } from './types';
 export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Navigation items configuration
-  const navigationItems = [
-    {
-      label: 'Tools',
-      href: '#',
-      isDropdown: true,
-      dropdownItems: [
-        { label: 'Prelist', href: '/prelist' },
-        { label: 'Portfolio', href: '/portfolio' },
-        { label: 'Market', href: '/market' }
-      ]
-    },
-    { label: 'About us', href: '/about' },
-    { label: 'Members', href: '/members' },
-    { label: 'Insights', href: '/insights' },
-    { label: 'Contact', href: '/contact' }
-  ];
-
   // Button text
   const ctaButtonText = 'Join System';
 
@@ -93,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
           {/* Center - Navigation (Desktop) */}
           <div className={styles.headerCenter}>
-            <Navigation items={navigationItems} />
+            <Navigation />
           </div>
 
           {/* Right Side - CTA Button (Desktop) / Mobile Buttons (Mobile) */}
@@ -127,10 +108,10 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
       </header>
 
       {/* Mobile Menu Navigation */}
-      <MobileMenuNavigation
+      <Navigation
+        variant="mobile"
         isOpen={isMobileMenuOpen}
         onClose={handleMobileMenuClose}
-        items={navigationItems}
       />
     </>
   );

@@ -21,14 +21,14 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   color: var(--color-primary-white);
   text-decoration: none;
   font-family: var(--font-gellix);
-  font-size: 0.85rem;
+  font-size: 0.9375rem;
   transition: background-color 0.2s ease;
   position: relative;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .navLink:hover {
@@ -72,7 +72,7 @@
   min-width: 36rem;
   background: var(--color-primary-gray);
   border-radius: 10px;
-  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   z-index: 50;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -231,6 +231,214 @@
   .dropdownLink {
     padding: 0.625rem 0.875rem;
     font-size: 0.875rem;
+  }
+}
+
+/* Mobile Navigation Styles */
+.backdrop {
+  position: fixed;
+  top: 61px; /* Aligned below header */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  opacity: 0;
+  animation: backdropFadeIn 0.3s ease forwards;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 61px; /* Start below header */
+  left: 0;
+  right: 0;
+  bottom: 0; /* Extend to bottom of screen */
+  width: 100%;
+  background: var(--color-primary-white); /* White background */
+  z-index: 100;
+  opacity: 0; /* Hidden when closed */
+  visibility: hidden; /* Hidden when closed */
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              visibility 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow-y: auto;
+}
+
+.mobileMenu.open {
+  opacity: 1; /* Visible when open */
+  visibility: visible; /* Visible when open */
+}
+
+.mobileMenuContent {
+  padding: 1rem;
+  padding-top: 1.5rem; /* Account for header */
+}
+
+.mobileNav {
+  width: 100%;
+}
+
+.mobileNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobileNavItem {
+  width: 100%;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 1rem;
+  color: var(--color-primary-black); /* Black text for white background */
+  text-decoration: none;
+  font-family: var(--font-gellix);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-gold); /* Gold color on hover */
+}
+
+.mobileDropdown {
+  width: 100%;
+}
+
+.mobileDropdownHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--color-primary-black);
+  font-family: var(--font-gellix);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.mobileDropdownTitle {
+  color: var(--color-primary-black);
+}
+
+.mobileDropdownIcon {
+  transition: transform 0.2s ease;
+}
+
+.mobileDropdownList {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  background: var(--color-primary-gray);
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.mobileDropdownItem {
+  width: 100%;
+}
+
+.mobileDropdownLink {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  color: var(--color-primary-white);
+  text-decoration: none;
+  font-family: var(--font-gellix);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.mobileDropdownLink:hover {
+  background: var(--color-gray-800);
+}
+
+.mobileItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-gray-800);
+  border-radius: 0.5rem;
+  color: var(--color-primary-white);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.mobileDropdownLink:hover .mobileItemIcon {
+  background: var(--color-primary-white);
+  color: var(--color-primary-black);
+}
+
+.mobileItemText {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileItemTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-primary-white);
+  margin-bottom: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobileItemDescription {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-primary-white);
+}
+
+.mobileItemArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: var(--color-primary-black);
+}
+
+.mobileDropdownLink:hover .mobileItemArrow {
+  opacity: 1;
+}
+
+.mobileProBadge {
+  background: var(--color-accent-green);
+  color: var(--color-primary-black);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  margin-left: 0.25rem; /* Closer to text */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 480px) {
+  .backdrop {
+    top: 61px; /* Adjusted for smaller header height */
+  }
+  .mobileMenu {
+    top: 61px; /* Adjusted for smaller header height */
+  }
+}
+
+/* Mobile Animation */
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

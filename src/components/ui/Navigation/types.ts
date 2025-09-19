@@ -8,6 +8,8 @@ export interface NavItem {
 }
 
 export interface NavigationProps {
-  items: NavItem[];
+  variant?: 'desktop' | 'mobile';
+  isOpen?: boolean;
+  onClose?: () => void;
   className?: string;
 }

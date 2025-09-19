@@ -63,7 +63,7 @@ export const Logo: React.FC<LogoProps> = ({
   };
 
   // Alt text
-  const altText = 'Kriptaz Invest Logo';
+  const altText = 'Invest Founders Logo';
 
   // Logo dimensions
   const dimensions = {
