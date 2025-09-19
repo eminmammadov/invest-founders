@@ -1,0 +1,39 @@
+/* Logo Component Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:focus {
+  outline: none;
+}
+
+.image {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Size Variants - Consistent across all screen sizes */
+.small {
+  --logo-height: 30px;
+}
+
+.medium {
+  --logo-height: 40px;
+}
+
+.large {
+  --logo-height: 50px;
+}
+
+.image {
+  height: var(--logo-height);
+  width: auto;
+}
+

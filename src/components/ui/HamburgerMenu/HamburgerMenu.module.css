@@ -1,0 +1,82 @@
+/* Hamburger Menu Component Styles - Compact Design */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  position: relative;
+  width: 2rem;
+  height: 1.65rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+  font-family: var(--font-gellix);
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.line {
+  width: 1.95rem;
+  height: 0.1875rem;
+  background: var(--color-primary-white);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  transform-origin: center;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line:nth-child(1) {
+  top: 0.375rem;
+}
+
+.line:nth-child(2) {
+  bottom: 0.375rem;
+}
+
+.hamburger:hover .line {
+  background: var(--color-accent-green-light);
+}
+
+/* Open state animations - Two lines to X */
+.hamburger.open .line:nth-child(1) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.hamburger.open .line:nth-child(2) {
+  bottom: 50%;
+  transform: translateX(-50%) translateY(50%) rotate(-45deg);
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hamburger,
+  .line {
+    transition: none;
+  }
+}
+
+/* Mobile navigation - only visible on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    width: 2rem;
+    height: 1.65rem;
+  }
+  
+  .line {
+    width: 1.95rem;
+    height: 0.1875rem;
+  }
+}
+
