@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/fonts/gellix.css";
 import { generateMetadata, pageMetadata } from "@/metadata";
-import { Header } from "@/components/layout";
+import { Header, Footer } from "@/components/layout";
 
 // Generate metadata using the new modular system
 export const metadata: Metadata = generateMetadata(pageMetadata.home);
@@ -21,12 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-gellix"
+      <body className="font-gellix layout-grid"
         data-new-gr-c-s-check-loaded="14.1254.0"
         data-gr-ext-installed=""
       >
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

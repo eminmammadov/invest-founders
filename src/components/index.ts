@@ -1,5 +1,5 @@
 // Export all components from this file
-export { Header } from './layout';
+export { Header, Footer } from './layout';
 
 // Export UI components
 export { Logo } from './ui/Logo';
@@ -9,7 +9,7 @@ export { HamburgerMenu } from './ui/HamburgerMenu';
 export { Hero } from './ui/Hero';
 
 // Export types
-export type { HeaderProps } from './layout';
+export type { HeaderProps, FooterProps, FooterLink } from './layout';
 export type { LogoProps } from './ui/Logo/types';
 export type { ButtonProps } from './ui/Button/types';
 export type { NavigationProps, NavItem } from './ui/Navigation/types';

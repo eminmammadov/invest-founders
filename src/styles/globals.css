@@ -98,6 +98,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Layout grid for pages with header and footer */
+.layout-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;
