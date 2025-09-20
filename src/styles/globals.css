@@ -96,6 +96,7 @@ body {
   font-family: var(--font-gellix);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 50px; /* Footer height için space */
 }
 
 /* Layout grid for pages with header and footer */
@@ -103,6 +104,19 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+/* Responsive footer spacing */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 45px;
+  }
 }
 
 

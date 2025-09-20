@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-gellix layout-grid"
+      <body className="font-gellix"
         data-new-gr-c-s-check-loaded="14.1254.0"
         data-gr-ext-installed=""
       >
