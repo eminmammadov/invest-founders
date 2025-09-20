@@ -135,14 +135,15 @@ export const Navigation: React.FC<NavigationProps> = ({
   useEffect(() => {
     if (variant === 'mobile') {
       if (isOpen) {
+        // Store original overflow value
+        const originalOverflow = document.body.style.overflow;
         document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'unset';
+        
+        return () => {
+          // Restore original overflow value
+          document.body.style.overflow = originalOverflow;
+        };
       }
-
-      return () => {
-        document.body.style.overflow = 'unset';
-      };
     }
   }, [variant, isOpen]);
 
