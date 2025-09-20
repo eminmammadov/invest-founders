@@ -69,7 +69,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 36rem;
+  min-width: 30.5rem;
   background: var(--color-primary-gray);
   border-radius: 10px;
   /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); */
@@ -191,8 +191,7 @@
   }
   
   .dropdown {
-    min-width: 26.75rem;
-    padding: 1rem;
+    min-width: 30rem;
   }
   
   .dropdownContent {
@@ -241,7 +240,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--color-overlay-black);
   z-index: 90;
   opacity: 0;
   animation: backdropFadeIn 0.3s ease forwards;

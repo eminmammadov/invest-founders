@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/fonts/gellix.css";
 import { generateMetadata, pageMetadata } from "@/metadata";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/layout";
 
 // Generate metadata using the new modular system
 export const metadata: Metadata = generateMetadata(pageMetadata.home);
