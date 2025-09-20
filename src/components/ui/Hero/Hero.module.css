@@ -170,7 +170,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 80vh;
+    min-height: 65vh;
   }
   
   .heroContent {
