@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Logo } from '../../ui/Logo';
-import { Navigation } from '../../ui/Navigation';
+import { Navigation } from '../Navigation';
 import { Button } from '../../ui/Button';
 import { HamburgerMenu } from '../../ui/HamburgerMenu';
 import styles from './Header.module.css';

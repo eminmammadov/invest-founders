@@ -241,7 +241,7 @@
   right: 0;
   bottom: 0;
   background: var(--color-overlay-black);
-  z-index: 90;
+  z-index: 1090;
   opacity: 0;
   animation: backdropFadeIn 0.3s ease forwards;
 }
@@ -254,7 +254,7 @@
   bottom: 0; /* Extend to bottom of screen */
   width: 100%;
   background: var(--color-primary-white); /* White background */
-  z-index: 100;
+  z-index: 1100;
   opacity: 0; /* Hidden when closed */
   visibility: hidden; /* Hidden when closed */
   transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
