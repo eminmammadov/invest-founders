@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/fonts/gellix.css";
-import { generateMetadata, pageMetadata } from "@/metadata";
+import { generateMetadata, pageMetadata } from "@/shared/metadata";
 import { Header, Footer } from "@/components/layout";
 
 // Generate metadata using the new modular system

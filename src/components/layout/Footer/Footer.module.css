@@ -8,7 +8,7 @@
 .footer {
   background: var(--color-primary-black);
   border-top: 1px solid var(--color-gray-800);
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,6 +25,14 @@
 .footerLeft {
   display: flex;
   align-items: center;
+}
+
+.copyright {
+  color: var(--color-gray-400);
+  font-family: var(--font-gellix);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .footerRight {
@@ -142,6 +150,10 @@
     min-height: 50px;
   }
   
+  .copyright {
+    font-size: 0.75rem;
+  }
+  
   .footerRight {
     gap: 0.5rem;
   }
@@ -161,6 +173,10 @@
     padding: 0.5rem 0.75rem;
     display: flex;
     min-height: 45px;
+  }
+  
+  .copyright {
+    font-size: 0.7rem;
   }
   
   .footerRight {

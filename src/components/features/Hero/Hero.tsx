@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './Hero.module.css';
 import { HeroProps } from './types';
-import { Button } from '../Button';
+import { Button } from '../../core/Button';
 
 /**
  * Hero Component Constants
@@ -15,7 +15,7 @@ import { Button } from '../Button';
 const HERO_CONSTANTS = {
   TITLE: 'Crypto investment and asset management fund',
   DESCRIPTION: 'Founded with distinguished investors, our regulated fund platform applies disciplined DDGO principles to allocate weekly savings into crypto assets, ensuring transparent, reliable, and sustainable growth.',
-  BUTTON_TEXT: 'Portfolio',
+  BUTTON_TEXT: 'Crypto Portfolio',
   LINK_TEXT: 'Read about us',
   VIDEO_SRC: '/videos/hero-video.mp4',
 } as const;

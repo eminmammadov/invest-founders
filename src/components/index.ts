@@ -1,15 +1,26 @@
-// Export all components from this file
+/**
+ * Components Export
+ * 
+ * Central export file for all components organized by category:
+ * - Layout: Header, Navigation, Footer
+ * - Core: Button, Logo, HamburgerMenu (fundamental UI components)
+ * - Features: Hero (feature-specific components)
+ * - Shared: Shared components across features
+ */
+
+// Layout Components
 export { Header, Navigation, Footer } from './layout';
 
-// Export UI components
-export { Logo } from './ui/Logo';
-export { Button } from './ui/Button';
-export { HamburgerMenu } from './ui/HamburgerMenu';
-export { Hero } from './ui/Hero';
+// Core Components (Fundamental UI building blocks)
+export { Button, Logo, HamburgerMenu } from './core';
 
-// Export types
+// Feature Components (Business logic components)
+export { Hero } from './features';
+
+// Shared Components (Cross-feature components)
+export * from './shared';
+
+// Types Export
 export type { HeaderProps, NavigationProps, NavItem, FooterProps, FooterLink } from './layout';
-export type { LogoProps } from './ui/Logo/types';
-export type { ButtonProps } from './ui/Button/types';
-export type { HamburgerMenuProps } from './ui/HamburgerMenu/types';
-export type { HeroProps } from './ui/Hero/types';
+export type { ButtonProps, LogoProps, HamburgerMenuProps } from './core';
+export type { HeroProps } from './features';

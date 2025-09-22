@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { TbArrowBadgeUp, TbArrowBadgeDown, TbBrandX } from 'react-icons/tb';
 import styles from './Footer.module.css';
 import { FooterProps, FooterLink } from './types';
-import { Logo } from '../../ui/Logo';
 
 /**
  * Footer Component Constants
@@ -13,6 +12,7 @@ import { Logo } from '../../ui/Logo';
  * Footer links and configuration data.
  */
 const FOOTER_CONSTANTS = {
+  COPYRIGHT_TEXT: `Invest Founders © ${new Date().getFullYear()}`,
   SOCIAL_LINKS: {
     X: {
       href: 'https://x.com/InvestFounders',
@@ -41,7 +41,7 @@ const FOOTER_CONSTANTS = {
 /**
  * Footer Component
  * 
- * A sticky footer component with logo, copyright information,
+ * A sticky footer component with copyright information,
  * dropdown navigation menu, and social media links.
  * 
  * @component
@@ -64,7 +64,7 @@ const FOOTER_CONSTANTS = {
  * 
  * @features
  * - Sticky positioning to bottom of viewport
- * - Logo and copyright information
+ * - Copyright information with automatic year
  * - Dropdown navigation menu with legal links
  * - Social media integration (X/Twitter)
  * - Responsive design for all screen sizes
@@ -123,9 +123,9 @@ export const Footer: React.FC<FooterProps> = ({
 
   return (
     <footer className={`${styles.footer} ${className}`} style={{ position: sticky ? 'sticky' : 'static' }}>
-      {/* Left Section - Logo */}
+      {/* Left Section - Copyright */}
       <div className={styles.footerLeft}>
-        <Logo size="small" />
+        <p className={styles.copyright}>{FOOTER_CONSTANTS.COPYRIGHT_TEXT}</p>
       </div>
 
       {/* Right Section - Dropdown and Social Links */}

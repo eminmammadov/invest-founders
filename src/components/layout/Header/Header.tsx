@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Logo } from '../../ui/Logo';
+import { Logo } from '../../core/Logo';
 import { Navigation } from '../Navigation';
-import { Button } from '../../ui/Button';
-import { HamburgerMenu } from '../../ui/HamburgerMenu';
+import { Button } from '../../core/Button';
+import { HamburgerMenu } from '../../core/HamburgerMenu';
 import styles from './Header.module.css';
 import { HeaderProps } from './types';
 
@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   // Logo configuration
   const logoConfig = {
     variant: 'white' as const,
-    size: 'small' as const
+    size: 'medium' as const
   };
 
   const handleMobileMenuToggle = () => {

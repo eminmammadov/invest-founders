@@ -90,6 +90,7 @@ export const Logo: React.FC<LogoProps> = ({
         height={dimensions[size].height}
         priority={defaults.PRIORITY}
         className={styles.image}
+        sizes="(max-width: 768px) 120px, (max-width: 1200px) 160px, 200px"
       />
     </Link>
   );
