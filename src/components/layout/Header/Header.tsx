@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Logo } from '../../core/Logo';
 import { Navigation } from '../Navigation';
 import { Button } from '../../core/Button';
@@ -81,18 +82,22 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           <div className={styles.headerRight}>
             {/* Desktop CTA Button */}
             <div className={styles.desktopCTA}>
-              <Button variant="primary" size="small">
-                {ctaButtonText}
-              </Button>
+              <Link href="/join">
+                <Button variant="primary" size="small">
+                  {ctaButtonText}
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Buttons */}
             <div className={styles.mobileButtons}>
               {/* Mobile CTA Button */}
               <div className={styles.mobileCTA}>
-                <Button variant="primary" size="small">
-                  {ctaButtonText}
-                </Button>
+                <Link href="/join">
+                  <Button variant="primary" size="small">
+                    {ctaButtonText}
+                  </Button>
+                </Link>
               </div>
 
               {/* Mobile Hamburger Menu */}

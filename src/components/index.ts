@@ -17,9 +17,6 @@ export { Button, Logo, HamburgerMenu } from './core';
 // Feature Components (Business logic components)
 export { Hero } from './features';
 
-// Shared Components (Cross-feature components)
-export * from './shared';
-
 // Types Export
 export type { HeaderProps, NavigationProps, NavItem, FooterProps, FooterLink } from './layout';
 export type { ButtonProps, LogoProps, HamburgerMenuProps } from './core';
