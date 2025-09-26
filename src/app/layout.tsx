@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/fonts/gellix.css";
+import "../styles/jupiter-overrides.css";
 import { generateMetadata, pageMetadata } from "@/shared/metadata";
 import { Header, Footer } from "@/components/layout";
+import { JupiterWalletProvider } from "@/components/core/JupiterWalletProvider";
 
 // Generate metadata using the new modular system
 export const metadata: Metadata = generateMetadata(pageMetadata.home);
@@ -25,11 +27,13 @@ export default function RootLayout({
         data-new-gr-c-s-check-loaded="14.1255.0"
         data-gr-ext-installed=""
       >
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <JupiterWalletProvider>
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </JupiterWalletProvider>
       </body>
     </html>
   );

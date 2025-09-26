@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.jupiterButton {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  width: 100% !important;
+}
+
+.currentUser {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  width: 100% !important;
+}
+
+.customButton {
+  background: var(--color-primary-black);
+  color: var(--color-primary-white);
+  border: 1px solid var(--color-primary-black);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 160px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.customButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.customButton:hover::before {
+  left: 100%;
+}
+
+.customButton:hover {
+  background: var(--color-gold);
+  color: var(--color-primary-black);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(170, 150, 95, 0.3);
+}
+
+.customButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(170, 150, 95, 0.2);
+}
+
+.customButton:disabled {
+  background: var(--color-gray-500);
+  color: var(--color-gray-300);
+  border-color: var(--color-gray-500);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.customButton:disabled::before {
+  display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .customButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    min-width: 140px;
+  }
+  
+  .customButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(170, 150, 95, 0.25);
+  }
+}
+
+@media (max-width: 480px) {
+  .customButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-width: 120px;
+  }
+  
+  .customButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(170, 150, 95, 0.2);
+  }
+}

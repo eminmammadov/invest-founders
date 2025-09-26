@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Logo } from '@/components/core/Logo';
-import { Button } from '@/components/core/Button';
+import { JupiterConnectButton } from '@/components/core/JupiterConnectButton';
 import styles from './Join.module.css';
 import { JoinProps } from '../../types';
 
@@ -53,11 +53,6 @@ const JOIN_CONSTANTS = {
  * - High contrast text for readability
  */
 export const Join: React.FC<JoinProps> = ({ className = '' }) => {
-  const handleConnectWallet = () => {
-    console.log('Connecting wallet');
-    // TODO: Implement wallet connection functionality
-  };
-
   const handleClose = () => {
     window.history.back();
   };
@@ -85,14 +80,11 @@ export const Join: React.FC<JoinProps> = ({ className = '' }) => {
           <p className={styles.subtitle}>{JOIN_CONSTANTS.SUBTITLE}</p>
           
           {/* Wallet Connect Button */}
-          <Button
-            onClick={handleConnectWallet}
-            variant="primary"
-            size="large"
+          <JupiterConnectButton
             className={styles.connectWalletButton}
           >
             {JOIN_CONSTANTS.CONNECT_WALLET_TEXT}
-          </Button>
+          </JupiterConnectButton>
 
           {/* Legal Text */}
           <div className={styles.legalSection}>
