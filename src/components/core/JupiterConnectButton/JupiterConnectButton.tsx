@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { UnifiedWalletButton } from '@jup-ag/wallet-adapter';
 import { useUnifiedWallet } from '@jup-ag/wallet-adapter';
 import styles from './JupiterConnectButton.module.css';
@@ -15,6 +15,28 @@ export const JupiterConnectButton: React.FC<JupiterConnectButtonProps> = ({
   children 
 }) => {
   const { connected, connecting, wallet } = useUnifiedWallet();
+
+  // Mobile wallet detection enhancement
+  useEffect(() => {
+    const handleMobileWalletDetection = () => {
+      // Check if we're on mobile
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // Force wallet detection on mobile
+        const event = new CustomEvent('jupiter-mobile-wallet-detect');
+        window.dispatchEvent(event);
+      }
+    };
+
+    // Run on mount and when window becomes visible
+    handleMobileWalletDetection();
+    window.addEventListener('focus', handleMobileWalletDetection);
+    
+    return () => {
+      window.removeEventListener('focus', handleMobileWalletDetection);
+    };
+  }, []);
 
   const getButtonText = () => {
     if (connecting) return 'Connecting...';

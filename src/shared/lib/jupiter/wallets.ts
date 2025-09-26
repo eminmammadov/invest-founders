@@ -1,12 +1,15 @@
 import { 
   CoinbaseWalletAdapter,
-  TrustWalletAdapter
+  TrustWalletAdapter,
+  PhantomWalletAdapter,
+  SolflareWalletAdapter
 } from '@solana/wallet-adapter-wallets';
 
 // Supported wallets for Jupiter integration
-// Phantom and Solflare are automatically detected as Standard Wallets
-// so we don't need to include them manually
+// Include all wallets for better mobile compatibility
 export const supportedWallets = [
+  new PhantomWalletAdapter(),
+  new SolflareWalletAdapter(),
   new CoinbaseWalletAdapter(),
   new TrustWalletAdapter()
 ];

@@ -311,7 +311,7 @@
   }
 }
 
-/* Custom wallet design codes*/
+/* Custom wallet design codes - Production compatible */
 .css-1rhst5f-Header {
     background-color: transparent;
     color: var(--color-primary-black);
@@ -328,7 +328,8 @@
     color: var(--color-gray-500);
 }
 
-.css-2k51qe-ListOfWallets ul li, .css-1i8hhfs-renderWalletList ul li {
+.css-2k51qe-ListOfWallets ul li, 
+.css-1i8hhfs-renderWalletList ul li {
     list-style: none !important;
     text-decoration: none !important;
 }
@@ -363,4 +364,48 @@
     font-family: var(--font-gellix);
     text-align: center !important;
     cursor: none;
+}
+
+/* Additional production-safe overrides */
+.jupiter-wallet-modal,
+[class*="jupiter-wallet"],
+[class*="wallet-modal"] {
+  font-family: var(--font-gellix) !important;
+}
+
+.jupiter-wallet-modal *,
+[class*="jupiter-wallet"] *,
+[class*="wallet-modal"] * {
+  box-sizing: border-box !important;
+}
+
+.css-nzjrnk-ModalDialog-ModalDialog {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border: none !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Mobile wallet detection improvements */
+@media (max-width: 768px) {
+  .jupiter-wallet-modal,
+  [class*="jupiter-wallet"],
+  [class*="wallet-modal"] {
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+  }
+  
+  .jupiter-wallet-modal .wallet-item,
+  [class*="jupiter-wallet"] .wallet-item,
+  [class*="wallet-modal"] .wallet-item {
+    min-height: 3rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
 }
