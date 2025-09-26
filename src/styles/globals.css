@@ -169,3 +169,5 @@ a {
   border-radius: 4px;
 }
 
+/* Jupiter Wallet Modal Global Overrides */
+@import './jupiter-overrides.css';
