@@ -168,3 +168,189 @@ a {
   padding: 8px 12px;
   border-radius: 4px;
 }
+
+/* Jupiter Wallet Modal Global Overrides - Production Safe */
+/* Bu dosya Jupiter'in modal tasarımını proje renklerimize uyarlar */
+
+/* Modal Container - Higher specificity */
+[data-jupiter-wallet-modal],
+.jupiter-wallet-modal,
+div[class*="jupiter-wallet"],
+div[class*="wallet-modal"],
+.css-nzjrnk-ModalDialog-ModalDialog {
+  background: var(--color-primary-white) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 20px 40px rgba(15, 15, 15, 0.15) !important;
+  border: 1px solid var(--color-gray-200) !important;
+  font-family: var(--font-gellix) !important;
+  color: var(--color-primary-black) !important;
+}
+
+/* Modal Header - Higher specificity */
+[data-jupiter-wallet-modal] .modal-header,
+[data-jupiter-wallet-modal] [class*="header"],
+.jupiter-wallet-modal .modal-header,
+.jupiter-wallet-modal [class*="header"],
+div[class*="jupiter-wallet"] .modal-header,
+div[class*="jupiter-wallet"] [class*="header"],
+div[class*="wallet-modal"] .modal-header,
+div[class*="wallet-modal"] [class*="header"],
+.css-nzjrnk-ModalDialog-ModalDialog .modal-header,
+.css-nzjrnk-ModalDialog-ModalDialog [class*="header"] {
+  background: var(--color-primary-white) !important;
+  border-bottom: 1px solid var(--color-gray-200) !important;
+  padding: 1.5rem !important;
+}
+
+/* Modal Title - Higher specificity */
+[data-jupiter-wallet-modal] .modal-title,
+[data-jupiter-wallet-modal] [class*="title"],
+.jupiter-wallet-modal .modal-title,
+.jupiter-wallet-modal [class*="title"],
+div[class*="jupiter-wallet"] .modal-title,
+div[class*="jupiter-wallet"] [class*="title"],
+div[class*="wallet-modal"] .modal-title,
+div[class*="wallet-modal"] [class*="title"],
+.css-nzjrnk-ModalDialog-ModalDialog .modal-title,
+.css-nzjrnk-ModalDialog-ModalDialog [class*="title"] {
+  color: var(--color-primary-black) !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+}
+
+/* Close Button - X Button Styling - Higher specificity */
+[data-jupiter-wallet-modal] .close-button,
+[data-jupiter-wallet-modal] [class*="close"],
+[data-jupiter-wallet-modal] button[aria-label*="close"],
+[data-jupiter-wallet-modal] button[aria-label*="Close"],
+.jupiter-wallet-modal .close-button,
+.jupiter-wallet-modal [class*="close"],
+.jupiter-wallet-modal button[aria-label*="close"],
+.jupiter-wallet-modal button[aria-label*="Close"],
+div[class*="jupiter-wallet"] .close-button,
+div[class*="jupiter-wallet"] [class*="close"],
+div[class*="jupiter-wallet"] button[aria-label*="close"],
+div[class*="jupiter-wallet"] button[aria-label*="Close"],
+div[class*="wallet-modal"] .close-button,
+div[class*="wallet-modal"] [class*="close"],
+div[class*="wallet-modal"] button[aria-label*="close"],
+div[class*="wallet-modal"] button[aria-label*="Close"],
+.css-nzjrnk-ModalDialog-ModalDialog .close-button,
+.css-nzjrnk-ModalDialog-ModalDialog [class*="close"],
+.css-nzjrnk-ModalDialog-ModalDialog button[aria-label*="close"],
+.css-nzjrnk-ModalDialog-ModalDialog button[aria-label*="Close"] {
+  color: var(--color-gray-500) !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0.5rem !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+  font-weight: 300 !important;
+  cursor: pointer !important;
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+}
+
+/* Wallet List Items - Higher specificity */
+[data-jupiter-wallet-modal] .wallet-item,
+[data-jupiter-wallet-modal] [class*="wallet"],
+.jupiter-wallet-modal .wallet-item,
+.jupiter-wallet-modal [class*="wallet"],
+div[class*="jupiter-wallet"] .wallet-item,
+div[class*="jupiter-wallet"] [class*="wallet"],
+div[class*="wallet-modal"] .wallet-item,
+div[class*="wallet-modal"] [class*="wallet"],
+.css-nzjrnk-ModalDialog-ModalDialog .wallet-item,
+.css-nzjrnk-ModalDialog-ModalDialog [class*="wallet"],
+.css-p4q54k-WalletListItem-WalletListItem {
+  background: var(--color-primary-white) !important;
+  border: 1px solid var(--color-gray-200) !important;
+  border-radius: 0.75rem !important;
+  padding: 1rem !important;
+  margin: 0.5rem 0 !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+  position: relative !important;
+  color: var(--color-primary-black) !important;
+}
+
+/* Remove unwanted dots/indicators - Siyah noktaları gizle - Higher specificity */
+[data-jupiter-wallet-modal] .wallet-item::before,
+[data-jupiter-wallet-modal] .wallet-item::after,
+[data-jupiter-wallet-modal] [class*="indicator"],
+[data-jupiter-wallet-modal] [class*="dot"],
+[data-jupiter-wallet-modal] [class*="bullet"],
+[data-jupiter-wallet-modal] [class*="marker"],
+[data-jupiter-wallet-modal] [class*="status"],
+[data-jupiter-wallet-modal] [class*="badge"],
+[data-jupiter-wallet-modal] [class*="point"],
+[data-jupiter-wallet-modal] [class*="circle"],
+.jupiter-wallet-modal .wallet-item::before,
+.jupiter-wallet-modal .wallet-item::after,
+.jupiter-wallet-modal [class*="indicator"],
+.jupiter-wallet-modal [class*="dot"],
+.jupiter-wallet-modal [class*="bullet"],
+.jupiter-wallet-modal [class*="marker"],
+.jupiter-wallet-modal [class*="status"],
+.jupiter-wallet-modal [class*="badge"],
+.jupiter-wallet-modal [class*="point"],
+.jupiter-wallet-modal [class*="circle"],
+div[class*="jupiter-wallet"] .wallet-item::before,
+div[class*="jupiter-wallet"] .wallet-item::after,
+div[class*="jupiter-wallet"] [class*="indicator"],
+div[class*="jupiter-wallet"] [class*="dot"],
+div[class*="jupiter-wallet"] [class*="bullet"],
+div[class*="jupiter-wallet"] [class*="marker"],
+div[class*="jupiter-wallet"] [class*="status"],
+div[class*="jupiter-wallet"] [class*="badge"],
+div[class*="jupiter-wallet"] [class*="point"],
+div[class*="jupiter-wallet"] [class*="circle"],
+div[class*="wallet-modal"] .wallet-item::before,
+div[class*="wallet-modal"] .wallet-item::after,
+div[class*="wallet-modal"] [class*="indicator"],
+div[class*="wallet-modal"] [class*="dot"],
+div[class*="wallet-modal"] [class*="bullet"],
+div[class*="wallet-modal"] [class*="marker"],
+div[class*="wallet-modal"] [class*="status"],
+div[class*="wallet-modal"] [class*="badge"],
+div[class*="wallet-modal"] [class*="point"],
+div[class*="wallet-modal"] [class*="circle"],
+.css-nzjrnk-ModalDialog-ModalDialog .wallet-item::before,
+.css-nzjrnk-ModalDialog-ModalDialog .wallet-item::after,
+.css-nzjrnk-ModalDialog-ModalDialog [class*="indicator"],
+.css-nzjrnk-ModalDialog-ModalDialog [class*="dot"],
+.css-nzjrnk-ModalDialog-ModalDialog [class*="bullet"],
+.css-nzjrnk-ModalDialog-ModalDialog [class*="marker"],
+.css-nzjrnk-ModalDialog-ModalDialog [class*="status"],
+.css-nzjrnk-ModalDialog-ModalDialog [class*="badge"],
+.css-nzjrnk-ModalDialog-ModalDialog [class*="point"],
+.css-nzjrnk-ModalDialog-ModalDialog [class*="circle"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  content: none !important;
+}
+
+/* Production-safe overrides */
+.jupiter-wallet-modal,
+[class*="jupiter-wallet"],
+[class*="wallet-modal"] {
+  font-family: var(--font-gellix) !important;
+}
+
+/* Mobile wallet detection improvements */
+@media (max-width: 768px) {
+  .jupiter-wallet-modal {
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+  }
+}

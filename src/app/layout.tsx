@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/fonts/gellix.css";
-import "../styles/jupiter-overrides.css";
 import { generateMetadata, pageMetadata } from "@/shared/metadata";
 import { Header, Footer } from "@/components/layout";
 import { JupiterWalletProvider } from "@/components/core/JupiterWalletProvider";
