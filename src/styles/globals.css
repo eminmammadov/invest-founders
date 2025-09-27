@@ -509,7 +509,7 @@ a {
     cursor: pointer !important;
     transition: all 0.2s ease !important;
     box-shadow: none !important;
-    padding: 0.25rem !important;
+    padding: 0.65rem !important;
     border: none !important;
     border-radius: 0.5rem !important;
 }
