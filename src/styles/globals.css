@@ -504,7 +504,7 @@ a {
     text-decoration: none !important;
 }
 
-.css-p4q54k-WalletListItem-WalletListItem {
+.css-p4q54k-WalletListItem-WalletListItem, .css-bfi25b {
     background: var(--color-gray-50) !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
@@ -514,11 +514,11 @@ a {
     border-radius: 0.5rem !important;
 }
 
-.css-p4q54k-WalletListItem-WalletListItem:hover {
+.css-p4q54k-WalletListItem-WalletListItem:hover, .css-bfi25b:hover {
     background: var(--color-gray-100) !important;
 }
 
-.css-1f95i91-ListOfWallets {
+.css-1f95i91-ListOfWallets, .css-10abz9y {
     width: 100%;
     height: 100%;
     background: var(--color-gray-50);
@@ -536,7 +536,7 @@ a {
     cursor: none;
 }
 
-.css-1vx73dy {
+.css-nzjrnk-ModalDialog-ModalDialog, .css-1vx73dy {
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
