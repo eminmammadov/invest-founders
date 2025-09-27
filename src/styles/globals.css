@@ -482,44 +482,29 @@ a {
   }
 }
 
-/* Custom wallet design codes - Production Safe */
-/* Header variations */
-.css-1rhst5f-Header,
-[class*="Header"],
-[class*="header"] {
-    background-color: transparent !important;
-    color: var(--color-primary-black) !important;
-    border: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
+/* Custom wallet design codes */
+.css-1rhst5f-Header, .css-1o7lixs {
+    background-color: transparent;
+    color: var(--color-primary-black);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.css-1rhst5f-Header:hover,
-[class*="Header"]:hover,
-[class*="header"]:hover {
-    color: var(--color-gray-500) !important;
+.css-1rhst5f-Header:hover, .css-1o7lixs:hover {
+    color: var(--color-gray-500);
 }
 
-/* List variations */
-.css-2k51qe-ListOfWallets ul li, 
-.css-1i8hhfs-renderWalletList ul li,
-[class*="ListOfWallets"] ul li,
-[class*="renderWalletList"] ul li,
-[class*="wallet-list"] ul li {
+.css-2k51qe-ListOfWallets ul li, .css-1i8hhfs-renderWalletList ul li, .css-1rigx3j ul li, .css-1rigx3j ul li {
     list-style: none !important;
     text-decoration: none !important;
 }
 
-/* Wallet List Item variations */
-.css-p4q54k-WalletListItem-WalletListItem, 
-.css-bfi25b,
-[class*="WalletListItem"],
-[class*="wallet-item"],
-[class*="walletItem"] {
+.css-p4q54k-WalletListItem-WalletListItem, .css-bfi25b {
     background: var(--color-gray-50) !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
@@ -529,43 +514,29 @@ a {
     border-radius: 0.5rem !important;
 }
 
-.css-p4q54k-WalletListItem-WalletListItem:hover, 
-.css-bfi25b:hover,
-[class*="WalletListItem"]:hover,
-[class*="wallet-item"]:hover,
-[class*="walletItem"]:hover {
+.css-p4q54k-WalletListItem-WalletListItem:hover, .css-bfi25b:hover {
     background: var(--color-gray-100) !important;
 }
 
-/* List of Wallets variations */
-.css-1f95i91-ListOfWallets, 
-.css-10abz9y,
-[class*="ListOfWallets"],
-[class*="wallet-list"],
-[class*="walletList"] {
-    width: 100% !important;
-    height: 100% !important;
-    background: var(--color-gray-50) !important;
-    border: none !important;
-    border-radius: 0.25rem !important;
-    padding: 0.25rem !important;
-    box-shadow: none !important;
-    margin: 0.5rem 0 !important;
+.css-1f95i91-ListOfWallets, .css-10abz9y {
+    width: 100%;
+    height: 100%;
+    background: var(--color-gray-50);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    box-shadow: none;
+    margin: 0.5rem 0;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     color: var(--color-primary-black) !important;
-    font-family: var(--font-gellix) !important;
+    font-family: var(--font-gellix);
     text-align: center !important;
-    cursor: none !important;
+    cursor: none;
 }
 
-/* Modal Dialog variations */
-.css-nzjrnk-ModalDialog-ModalDialog, 
-.css-1vx73dy,
-[class*="ModalDialog"],
-[class*="modal-dialog"],
-[class*="modalDialog"] {
+.css-nzjrnk-ModalDialog-ModalDialog, .css-1vx73dy {
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
@@ -576,29 +547,6 @@ a {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
-
-/* Additional production-safe selectors */
-[class*="jupiter"],
-[class*="wallet"],
-[class*="modal"],
-[class*="dialog"],
-[class*="connect"],
-[class*="button"] {
-    font-family: var(--font-gellix) !important;
-}
-
-/* Generic wallet modal overrides */
-div[class*="wallet"],
-div[class*="modal"],
-div[class*="dialog"],
-div[class*="jupiter"] {
-    background: var(--color-primary-white) !important;
-    border-radius: 1rem !important;
-    box-shadow: 0 20px 40px rgba(15, 15, 15, 0.15) !important;
-    border: 1px solid var(--color-gray-200) !important;
-    font-family: var(--font-gellix) !important;
-    color: var(--color-primary-black) !important;
 }
 
 /* Production-safe overrides */
